@@ -66,7 +66,7 @@ getAssetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
   Model2: {
     modelName: 'Model2',
 
-    sceneURL: this.getAssetPath('/v3dApp3/model2.gltf'),
+    sceneURL: this.getAssetPath('v3dApp3/model2.gltf'),
     logicURL: this.getAssetPath('v3dApp3/visual_logic.js'),
     createApp: createAppModel2,
     infoPointColor: 0xffffff,
@@ -82,7 +82,7 @@ getAssetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
   Model3: {
     modelName: 'Model3',
 
-        sceneURL: this.getAssetPath('/v3dApp2/model3Marta.gltf'),
+        sceneURL: this.getAssetPath('v3dApp2/model3Marta.gltf'),
     logicURL: this.getAssetPath('v3dApp2/visual_logic.js'),
     createApp: createAppModel3,
      infoPointColor: 0xff0000,
@@ -334,7 +334,7 @@ getAssetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
 
     const textureLoader = new v3d.TextureLoader();
    const spriteMap = textureLoader.load(
-  '/v3dApp/paint-brush-solid.svg',
+  this.getAssetPath('v3dApp/paint-brush-solid.svg'),
   (texture) => {
     console.log(' Tekstura załadowana pomyślnie:', texture.image?.src || texture);
   },
