@@ -1,0 +1,545 @@
+:root {
+  --header: #77786b;
+  --background: #e8e3d8;
+  --text: #555555;
+
+  --radius: 16px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text);
+}
+html,
+button {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+html, body {
+  overflow-y: auto !important;
+}
+
+header {
+  background-color: var(--header);
+  padding: 20px;
+  text-align: center;
+}
+header h2 {
+  color: white;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 300;
+}
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+}
+h4 {
+  font-size: 26px;
+  font-weight: 300;
+}
+p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.apartment-cards {
+  background-color: var(--background);
+  text-align: center;
+  padding: 18px;
+}
+.apartment-cards h3,
+.apartment-hero h3 {
+  padding: 5px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  padding: 24px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.card {
+  background-color: white;
+  padding: 18px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+.card h4 {
+  padding: 16px;
+}
+.apartment-hero {
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+}
+.hero-item {
+  background-color: #8fa78f;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border-radius: var(--radius);
+}
+.hero-item h4 {
+  color: white;
+  grid-row: 2/4;
+  padding: 0px 20px;
+  grid-column: 3/4;
+  justify-self: center;
+}
+
+.hero-item img {
+  grid-column: 1/3;
+  grid-row: 1/5;
+  height: auto;
+}
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  width: 80%;
+  top: 20%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 24px;
+}
+.hero-text h1,
+.hero-text h4 {
+  padding-left: 14px;
+  grid-column: 1/3;
+  padding-right: 42px;
+}
+.hero-text h4 {
+  margin-top: 5px;
+}
+.more {
+  font-size: 20px;
+  grid-row: 4/5;
+  width: 50%;
+  height: 45px;
+  justify-self: center;
+  background-color: white;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.contact{
+  width: 90%;
+  height: 45px;
+  font-size: 20px;
+  background-color: var(--header);
+  color: white;
+  display: flex;
+  border-radius: var(--radius);
+  border: none;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 0 auto;
+}
+
+.link {
+  text-decoration: none;
+}
+.apartment-details {
+  max-width: 95%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.details-item {
+  background-color: var(--background);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: var(--radius);
+  height: 80vh;
+}
+
+.details {
+  grid-column: 4/5;
+  text-align: center;
+  position: relative;
+  top: 5%;
+}
+
+.details-item iframe {
+  grid-column: 1/4;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+}
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background-color: #e8e3d856;
+  border-radius: var(--radius);
+}
+.verge3d-app {
+  grid-column: 1 / 4;
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--radius);
+  /*overflow: visible;*/
+}
+
+.v3d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    touch-action: none;
+    overscroll-behavior: none;
+}
+
+.details-box {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: var(--radius);
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85%;
+}
+.toggle-button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+.more-details {
+  max-height: 150px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0px 8px;
+}
+
+iframe {
+  border: 0;
+}
+
+form{
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 3rem;
+}
+
+form label{
+  display: block;
+  margin-bottom: 10px;
+}
+form h4{
+  padding-bottom: 10px;
+}
+
+form p{
+  padding-top: 15px;
+}
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--text);
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: none;
+}
+.form-button{
+  margin-top: 30px;
+  height: 40px;
+  width: 20%;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.detail-label{
+  max-width: 65%;
+  text-align: left;
+}
+.detail-value{
+  max-width: 35%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 1220px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .more {
+    width: 40%;
+    height: 38px;
+    font-size: 16px
+  }
+
+  .apartment-hero {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .container {
+    column-gap: 30px;
+  }
+  .card {
+    padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .more {
+    width: 37%;
+    height: 30px;
+    font-size: 14px;
+    column-gap: 6px;
+  }
+  .container {
+    column-gap: 20px;
+  }
+  .apartment-hero {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .card h4 {
+    padding: 10px;
+  }
+  .hero-text {
+    top: 15%;
+  }
+  .item h4 {
+    padding: 0px 10px;
+  }
+  .card {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 748px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .more {
+    width: 37%;
+    height: 30px;
+    font-size: 12px;
+    column-gap: 6px;
+  }
+  .container {
+    column-gap: 20px;
+  }
+  .apartment-hero {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+  }
+  .card h4 {
+    padding: 8px;
+  }
+  .hero-text {
+    top: 10%;
+  }
+  .hero-text h1,
+  .hero-text h4 {
+    padding-right: 28px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
+  header {
+    padding: 15px;
+  }
+  .more {
+    width: 37%;
+    height: 26px;
+    font-size: 10px;
+    column-gap: 2px;
+  }
+  .container {
+    column-gap: 10px;
+  }
+  .apartment-hero {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+  }
+  .card h4 {
+    padding: 8px;
+  }
+  .card {
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h4 {
+    font-size: 10px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .more {
+    width: 37%;
+    height: 20px;
+    font-size: 8px;
+    column-gap: 2px;
+  }
+  .card {
+    padding: 6px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  h1 {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 8px;
+  }
+  p {
+    font-size: 8px;
+  }
+  .more {
+    width: 35%;
+    height: 15px;
+    font-size: 6px;
+    column-gap: 2px;
+  }
+  .card {
+    padding: 6px;
+  }
+}
+.card-button-container {
+  text-align: center;
+  margin: 15px 0;
+  background-color: #E8E3D8FF;
+  padding: 12px 14px;
+  border-radius: 30px;
+  text-decoration: none;
+
+
+
+
+}

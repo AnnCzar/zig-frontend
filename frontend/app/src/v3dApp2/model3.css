@@ -1,0 +1,58 @@
+/* __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated */
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.v3d-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 1;
+}
+.painting_palette {
+    position: absolute;
+    display: none;
+    background: white;
+    border-radius: 25px;
+    padding: 2.5px;
+    z-index: 2;
+  }
+
+  #wall_1_paint_icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("icons/paint-brush-solid.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3); 
+}
+
+.fullscreen-open {
+    background-image: url('media/fullscreen_open.svg');
+}
+
+.fullscreen-close {
+    background-image: url('media/fullscreen_close.svg');
+}
+
+/* removes tap blinking on ios devices */
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }
