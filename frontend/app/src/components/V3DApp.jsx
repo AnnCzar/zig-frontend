@@ -28,11 +28,12 @@ class V3DApp extends React.Component {
   #currentWallMaterialName = null;
   #isLoading = false;
   #infoPointColor = 0xffffff;
-
+getAssetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
     #models = {
   Model1: {
     modelName: 'Model1',
-    sceneURL: '/v3dApp/Model1.gltf',
+    sceneURL: this.getAssetPath('v3dApp/Model1.gltf'),
+    logicURL: this.getAssetPath('v3dApp/visual_logic.js'),
     createApp: createAppModel1,
     infoPointColor: "#001542",
     colors: {
@@ -64,7 +65,9 @@ class V3DApp extends React.Component {
   },
   Model2: {
     modelName: 'Model2',
-    sceneURL: '/v3dApp3/model2.gltf',
+
+    sceneURL: this.getAssetPath('/v3dApp3/model2.gltf'),
+    logicURL: this.getAssetPath('v3dApp3/visual_logic.js'),
     createApp: createAppModel2,
     infoPointColor: 0xffffff,
     roomData: {
@@ -78,7 +81,9 @@ class V3DApp extends React.Component {
   },
   Model3: {
     modelName: 'Model3',
-    sceneURL: '/v3dApp2/model3Marta.gltf',
+
+        sceneURL: this.getAssetPath('/v3dApp2/model3Marta.gltf'),
+    logicURL: this.getAssetPath('v3dApp2/visual_logic.js'),
     createApp: createAppModel3,
      infoPointColor: 0xff0000,
     colors: {
