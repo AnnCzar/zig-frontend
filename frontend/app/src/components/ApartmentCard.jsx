@@ -8,7 +8,9 @@ function ApartmentCard(props) {
     <div className="card">
       <img className="image" src={props.image} alt="Apartment" />
       <h4>{props.title}</h4>
-        {props.linkTo && (
+
+      <p>{props.description}</p>
+                {props.linkTo && (
         <div className="card-button-container">
           <Link
             to={props.linkTo}
@@ -19,7 +21,6 @@ function ApartmentCard(props) {
           </Link>
         </div>
       )}
-      <p>{props.description}</p>
     </div>
   );
 }
